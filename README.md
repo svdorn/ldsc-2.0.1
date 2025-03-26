@@ -1,30 +1,31 @@
 
-# LDSC (LD SCore) `v2.0.0`
+# LDSC (LD SCore) `v2.0.1` - updates from  to work with Python3
 
 `ldsc` is a command line tool for estimating heritability and genetic correlation from GWAS summary statistics. `ldsc` also computes LD Scores.
+Updates from [PyPi ldsc v2.0.1](https://pypi.org/project/ldsc/#files) with additional updates from `svdorn` to work with Python3.
 
 ## Getting Started
 
 
 
-In order to download `ldsc`, you should clone this repository via the commands
+In order to download `ldsc`, you should clone this repository via the commands:
 ```  
-git clone https://github.com/bulik/ldsc.git
-cd ldsc
+git clone https://github.com/svdorn/ldsc-2.0.1.git
+cd ldsc-2.0.1
 ```
 
-In order to install the Python dependencies, you will need the [Anaconda](https://store.continuum.io/cshop/anaconda/) Python distribution and package manager. After installing Anaconda, run the following commands to create an environment with LDSC's dependencies:
+In order to install the Python dependencies, run the following commands from the ldsc-2.0.1 :
 
 ```
-conda env create --file environment.yml
-source activate ldsc
+pip install .
 ```
+This will install dependancies from setup.py.
 
 Once the above has completed, you can run:
 
 ```
-./ldsc.py -h
-./munge_sumstats.py -h
+python ./ldsc.py -h
+python ./munge_sumstats.py -h
 ```
 to print a list of all command-line options. If these commands fail with an error, then something as gone wrong during the installation process. 
 
@@ -58,7 +59,7 @@ which tells you which files were changed. If you have modified the `ldsc` source
 In case the Python dependencies have changed, you can update the LDSC environment with
 
 ```
-conda env update --file environment.yml
+pip install .
 ```
 
 ## Where Can I Get LD Scores?

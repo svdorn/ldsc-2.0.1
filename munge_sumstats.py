@@ -125,7 +125,7 @@ numeric_cols = ['P', 'N', 'N_CAS', 'N_CON', 'Z', 'OR', 'BETA', 'LOG_ODDS', 'INFO
 def read_header(fh):
     '''Read the first line of a file and returns a list with the column names.'''
     (openfunc, compression) = get_compression(fh)
-    return [x.rstrip('\n') for x in openfunc(fh).readline().decode().split()]
+    return [x.rstrip('\n') for x in openfunc(fh).readline().split()]
 
 
 def get_cname_map(flag, default, ignore):
@@ -154,7 +154,7 @@ def get_compression(fh):
     '''
     if fh.endswith('gz'):
         compression = 'gzip'
-        openfunc = gzip.open
+        openfunc = lambda f: gzip.open(f, 'rt') if f.endswith('.gz') else open(f, 'r')
     elif fh.endswith('bz2'):
         compression = 'bz2'
         openfunc = bz2.BZ2File

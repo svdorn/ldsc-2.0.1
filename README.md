@@ -19,7 +19,8 @@ In order to install the Python dependencies, run the following commands from the
 ```
 pip install .
 ```
-This will install dependancies from setup.py.
+This will install dependancies from setup.py.   
+
 If this doesn't work, setup an environment using conda by running:
 ```
 conda env create --file environment.yml

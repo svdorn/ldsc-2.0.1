@@ -26,6 +26,7 @@ If this doesn't work, setup an environment using conda by running:
 conda env create --file environment.yml
 source activate ldsc
 ```
+If you're using Windows, you may need to install [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) before using conda because some of the packages require a unix-like OS. Because of this, it is recommended to use a Mac or linux OS to run this software.
 
 Once the above has completed, you can run:
 

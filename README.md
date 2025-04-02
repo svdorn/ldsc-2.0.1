@@ -20,6 +20,11 @@ In order to install the Python dependencies, run the following commands from the
 pip install .
 ```
 This will install dependancies from setup.py.
+If this doesn't work, setup an environment using conda by running:
+```
+conda env create --file environment.yml
+source activate ldsc
+```
 
 Once the above has completed, you can run:
 
@@ -63,21 +68,11 @@ pip install .
 ```
 
 ## Where Can I Get LD Scores?
+You can download ldsc input files from 1000G data [here](https://uwmadison.box.com/s/u5yqtacw7sev1aj97cxi1iyw9wrgk34v).
 
+Alternatively, you can use these older links to download the data.
 You can download [European](https://data.broadinstitute.org/alkesgroup/LDSCORE/eur_w_ld_chr.tar.bz2) and [East Asian LD Scores](https://data.broadinstitute.org/alkesgroup/LDSCORE/eas_ldscores.tar.bz2) from 1000 Genomes [here](https://data.broadinstitute.org/alkesgroup/LDSCORE/). These LD Scores are suitable for basic LD Score analyses (the LD Score regression intercept, heritability, genetic correlation, cross-sex genetic correlation). You can download partitioned LD Scores for partitioned heritability estimation [here](http://data.broadinstitute.org/alkesgroup/LDSCORE/).
 
-
-## Support
-
-Before contacting us, please try the following:
-
-1. The [wiki](https://github.com/bulik/ldsc/wiki) has tutorials on [estimating LD Score](https://github.com/bulik/ldsc/wiki/LD-Score-Estimation-Tutorial), [heritability, genetic correlation and the LD Score regression intercept](https://github.com/bulik/ldsc/wiki/Heritability-and-Genetic-Correlation) and [partitioned heritability](https://github.com/bulik/ldsc/wiki/Partitioned-Heritability).
-2. Common issues are described in the [FAQ](https://github.com/bulik/ldsc/wiki/FAQ)
-2. The methods are described in the papers (citations below)
-
-If that doesn't work, you can get in touch with us via the [google group](https://groups.google.com/forum/?hl=en#!forum/ldsc_users).
-
-Issues with LD Hub?  Email ld-hub@bristol.ac.uk
 
 
 ## Citation
